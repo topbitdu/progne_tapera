@@ -1,1 +1,7 @@
-Version 0.0.1: The initial EnumListing module and EnumItem class is released.
+# Progne Tapera Change Log 枚举库变更日志
+
+## v0.1
+1. Enum Item class
+2. Enum List concern
+3. Enum Config concern
+4. Enum Code concern
