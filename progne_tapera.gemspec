@@ -6,7 +6,7 @@ require 'progne_tapera/version'
 Gem::Specification.new do |spec|
   spec.name          = "progne_tapera"
   spec.version       = ProgneTapera::VERSION
-  spec.authors       = ["Du Hengfeng"]
+  spec.authors       = ["Topbit Du"]
   spec.email         = ["topbit.du@gmail.com"]
   spec.summary       = %q{A configurable enumeration for Ruby.}
   spec.description   = %q{Progne Tapera is another enum implementation for Ruby. It focuses on configurable enumeration.}
