@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'progne_tapera'
 
 describe ProgneTapera::EnumList do
 
