@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'progne_tapera'
   spec.version       = ProgneTapera::VERSION
   spec.authors       = [ 'Topbit Du' ]
-  spec.email         = ["topbit.du@gmail.com"]
+  spec.email         = [ "topbit.du@gmail.com" ]
   spec.summary       = %q{Rails-based configurable enumeration}
   spec.description   = %q{Progne Tapera is a Rails-based configurable enumeration implementation. Progne Tapera is the Brown-chested Martin in Latin. Progne Tapera 是基于 Rails 的可配置的枚举实现。Progne Tapera 是棕胸崖燕的拉丁学名。}
   spec.homepage      = "https://github.com/topbitdu/progne_tapera"
