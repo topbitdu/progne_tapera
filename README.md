@@ -36,7 +36,68 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+config/initializers/enum.rb
+```ruby
+Unidom::Common::YamlHelper.load_enum config: Rails.configuration, root: Rails.root
+```
+
+config/enum.rb
+```ruby
+enum:
+
+  gender:
+    male:
+      code: '1'
+    female:
+      code: '2'
+    not_specified:
+      code: '9'
+
+  china_ethnicity:
+    han:
+      code: HA
+      numeric_code: '01'
+    mongel:
+      code: 'MG'
+      numeric_code: '02'
+```
+
+config/locales/enum.zh-CN.yml
+```ruby
+'zh-CN':
+  enum:
+
+    gender:
+      male:          男
+      female:        女
+      not_specified: 未指定
+
+    china_ethnicity:
+      han:    汉
+      mongel: 蒙古
+```
+
+app/types/gender.rb
+```ruby
+class Gender < ActiveRecord::Type::Value
+
+  include ProgneTapera::EnumConfig
+
+  enum
+
+end
+```
+
+app/types/ethnicity.rb
+```ruby
+class Ethnicity < ActiveRecord::Type::Value
+
+  include ProgneTapera::EnumConfig
+
+  enum :china_ethnicity
+
+end
+```
 
 
 
