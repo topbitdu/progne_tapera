@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'progne_tapera/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "progne_tapera"
+  spec.name          = 'progne_tapera'
   spec.version       = ProgneTapera::VERSION
   spec.authors       = ["Topbit Du"]
   spec.email         = ["topbit.du@gmail.com"]
