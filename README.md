@@ -41,8 +41,8 @@ config/initializers/enum.rb
 Unidom::Common::YamlHelper.load_enum config: Rails.configuration, root: Rails.root
 ```
 
-config/enum.rb
-```ruby
+config/enum.yml
+```yaml
 enum:
 
   gender:
@@ -63,7 +63,7 @@ enum:
 ```
 
 config/locales/enum.zh-CN.yml
-```ruby
+```yaml
 'zh-CN':
   enum:
 
