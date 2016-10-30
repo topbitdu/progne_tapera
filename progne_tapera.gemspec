@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'Rails-based configurable enumeration'
   spec.description   = 'Progne Tapera is a Rails-based configurable enumeration implementation. Progne Tapera is the Brown-chested Martin in Latin. Progne Tapera 是基于 Rails 的可配置的枚举实现。Progne Tapera 是棕胸崖燕的拉丁学名。'
   spec.homepage      = 'https://github.com/topbitdu/progne_tapera'
-  spec.license       = "MIT"
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
