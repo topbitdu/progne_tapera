@@ -5,3 +5,6 @@
 2. Enum List concern
 3. Enum Config concern
 4. Enum Code concern
+
+## v0.2
+1. Enum State concern
