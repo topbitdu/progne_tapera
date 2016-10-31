@@ -105,6 +105,7 @@ end
 
 ```ruby
 include ProgneTapera::EnumList
+include ProgneTapera::EnumConfig
 ```
 
 ### Enum List concern
@@ -122,6 +123,12 @@ The Enum List concern do the following tasks for the includer automatically:
 10. Define the .form_options method as: ``form_options(&block)``  
 11. Define the .deserialize method as: ``deserialize(value)``  
 12. Define the .serialize method as: ``serialize(value)``
+
+### Enum Config concern
+
+The Enum Config concern do the following tasks for the includer automatically:  
+1. Include the Enum List concern  
+2. Define the .enum method as: ``enum(name = nil)``
 
 
 
