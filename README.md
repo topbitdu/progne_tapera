@@ -101,6 +101,30 @@ end
 
 
 
+## Include the Concerns
+
+```ruby
+include ProgneTapera::EnumList
+```
+
+### Enum List concern
+
+The Enum List concern do the following tasks for the includer automatically:  
+1. Include the Enumerable module  
+2. Define the .enum_name method as: ``enum_name(name = nil)``  
+3. Define the .item_defined? method as: ``item_defined?(item)``  
+4. Define the .add_item method as: ``add_item(item)``  
+5. Define the .safe_add_item method as: ``safe_add_item(item)``  
+6. Define the .enum_constants method as: ``enum_constants``  
+7. Define the .all method as: ``all``  
+8. Define the .selected method as: ``selected(&block)``  
+9. Define the .each method as: ``each(&block)``  
+10. Define the .form_options method as: ``form_options(&block)``  
+11. Define the .deserialize method as: ``deserialize(value)``  
+12. Define the .serialize method as: ``serialize(value)``
+
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/topbitdu/progne_tapera/fork )
