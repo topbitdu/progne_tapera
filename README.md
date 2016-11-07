@@ -106,6 +106,7 @@ end
 ```ruby
 include ProgneTapera::EnumList
 include ProgneTapera::EnumConfig
+include ProgneTapera::EnumCode
 ```
 
 ### Enum List concern
@@ -129,6 +130,11 @@ The Enum List concern do the following tasks for the includer automatically:
 The Enum Config concern do the following tasks for the includer automatically:  
 1. Include the Enum List concern  
 2. Define the .enum method as: ``enum(name = nil)``
+
+### Enum Code concern
+
+The Enum Code concern do the following tasks for the includer automatically:  
+1. Define the .code method as: ``code(field, enum)``
 
 
 
