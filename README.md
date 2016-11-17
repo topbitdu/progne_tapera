@@ -95,6 +95,31 @@ class Ethnicity < ActiveRecord::Type::Value
   include ProgneTapera::EnumConfig
 
   enum :china_ethnicity
+  # 用 :china_ethnicity 指定的 i18n 资源。
+
+end
+```
+
+app/types/ethnicity.rb
+```ruby
+class Ethnicity < ActiveRecord::Type::Value
+
+  include ProgneTapera::EnumConfig
+
+  enum :china_ethnicity_alphabetic, :china_ethnicity
+  # 以民族字母代码为代码，用 :china_ethnicity 指定的 i18n 资源。
+
+end
+```
+
+app/types/ethnicity.rb
+```ruby
+class Ethnicity < ActiveRecord::Type::Value
+
+  include ProgneTapera::EnumConfig
+
+  enum :china_ethnicity_numeric, :china_ethnicity
+  # 民族数字代码，用 :china_ethnicity 指定的 i18n 资源。
 
 end
 ```
