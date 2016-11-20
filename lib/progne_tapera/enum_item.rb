@@ -2,7 +2,7 @@ require 'rails'
 
 class ProgneTapera::EnumItem
 
-  attr_reader :code, :name
+  attr_reader :code, :name, :options
 
   # code = HA (value)
   # name = han
@@ -10,8 +10,8 @@ class ProgneTapera::EnumItem
   # -> constant: HAN
   def initialize(code, name, options = {})
 
-    raise ArgumentError.new 'The code argument is required.' if code.blank?
-    raise ArgumentError.new 'The name argument is required.' if name.blank?
+    raise ArgumentError.new('The code argument is required.') if code.blank?
+    raise ArgumentError.new('The name argument is required.') if name.blank?
 
     @code    = code
     @name    = name
@@ -20,7 +20,7 @@ class ProgneTapera::EnumItem
     @options.each do |key, value|
       class_eval do
         define_method(key.to_sym) do
-          value
+          @options[key] #value
         end
       end
     end
