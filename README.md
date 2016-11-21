@@ -97,6 +97,16 @@ class Ethnicity < ActiveRecord::Type::Value
   enum :china_ethnicity
   # 用 :china_ethnicity 指定的 i18n 资源。
 
+  module ItemMethods
+
+    def major?
+      'HA'==code
+    end
+    # Ethnicity::HAN.major? returns true
+    # Ethnicity::MONGEL.major? returns false
+
+  end
+
 end
 ```
 
@@ -128,6 +138,14 @@ end
 ```ruby
 Ethnicity::HAN.code           # 'HA'
 Ethnicity::HAN.localized_name # '汉'
+```
+
+app/models/person.rb
+```ruby
+class Person < ActiveRecord::Base
+  code :ethnicity, Ethnicity
+  # The :ethnicity above implies the Person model has the :ethnicity_code field.
+end
 ```
 
 
@@ -176,7 +194,7 @@ config/locales/enum.zh-CN.yml
 ```ruby
 # Overload the i18n resources of the Ethnicity enum code
 Ethnicity.class_eval do
-  overload_enum_i18n :ethnicity_overloaded
+  overload_enum_i18n :china_ethnicity_overloaded
 end
 ```
 
