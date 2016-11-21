@@ -124,6 +124,12 @@ class Ethnicity < ActiveRecord::Type::Value
 end
 ```
 
+在某处需要调用民族 (Ethnicity) 枚举型的代码中：
+```ruby
+Ethnicity::HAN.code           # 'HA'
+Ethnicity::HAN.localized_name # '汉'
+```
+
 
 
 ## Include the Concerns
@@ -155,6 +161,32 @@ The Enum List concern do the following tasks for the includer automatically:
 The Enum Config concern do the following tasks for the includer automatically:  
 1. Include the Enum List concern  
 2. Define the .enum method as: ``enum(name = nil)``
+3. Define the .overload_enum_i18n method as: ``overload_enum_i18n(localized_name = nil)``
+
+config/locales/enum.zh-CN.yml
+```yaml
+'zh-CN':
+  enum:
+
+    china_ethnicity_overloaded:
+      han:    汉族
+      mongel: 蒙古族
+```
+
+```ruby
+# Overload the i18n resources of the Ethnicity enum code
+Ethnicity.class_eval do
+  overload_enum_i18n :ethnicity_overloaded
+end
+```
+
+在某处需要调用民族 (Ethnicity) 枚举型的代码中：
+```ruby
+Ethnicity::HAN.code           # 'HA'
+Ethnicity::HAN.localized_name # '汉族' not '汉'
+```
+
+
 
 ### Enum Code concern
 
