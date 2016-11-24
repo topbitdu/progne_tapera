@@ -37,11 +37,13 @@ Or install it yourself as:
 ## Usage
 
 config/initializers/enum.rb
+
 ```ruby
 Unidom::Common::YamlHelper.load_enum config: Rails.configuration, root: Rails.root
 ```
 
 config/enum.yml
+
 ```yaml
 enum:
 
@@ -63,6 +65,7 @@ enum:
 ```
 
 config/locales/enum.zh-CN.yml
+
 ```yaml
 'zh-CN':
   enum:
@@ -78,6 +81,7 @@ config/locales/enum.zh-CN.yml
 ```
 
 app/types/gender.rb
+
 ```ruby
 class Gender < ActiveRecord::Type::Value
 
@@ -89,6 +93,7 @@ end
 ```
 
 app/types/ethnicity.rb
+
 ```ruby
 class Ethnicity < ActiveRecord::Type::Value
 
@@ -111,6 +116,7 @@ end
 ```
 
 app/types/ethnicity.rb
+
 ```ruby
 class Ethnicity < ActiveRecord::Type::Value
 
@@ -123,6 +129,7 @@ end
 ```
 
 app/types/ethnicity.rb
+
 ```ruby
 class Ethnicity < ActiveRecord::Type::Value
 
@@ -135,12 +142,14 @@ end
 ```
 
 在某处需要调用民族 (Ethnicity) 枚举型的代码中：
+
 ```ruby
 Ethnicity::HAN.code           # 'HA'
 Ethnicity::HAN.localized_name # '汉'
 ```
 
-app/models/person.rb
+在使用枚举型的模型中：（如 app/models/person.rb）
+
 ```ruby
 class Person < ActiveRecord::Base
   code :ethnicity, Ethnicity
