@@ -7,7 +7,7 @@
 4. Enum Code concern
 
 ## v0.1.1
-1. Improve the Ruby Gem Specification to depend on Rails v4.2
+1. Improve the Ruby Gem Specification to depend on [rails](https://github.com/rails/rails) v4.2
 
 ## v0.2
 1. Improve the Enum Config concern to support the customized enum i18n name
