@@ -57,6 +57,11 @@ module ProgneTapera::EnumList
       all.each &block
     end
 
+    # Lookup
+    def lookup(code)
+      select { |item| item.code==code }.first
+    end
+
     # Form Option
     def form_options(&block)
       items = block_given? ? selected(&block) : selected
