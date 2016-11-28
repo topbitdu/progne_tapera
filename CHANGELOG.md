@@ -13,4 +13,4 @@
 1. Improved the Enum Config concern to support the customized enum i18n name
 
 ## v0.3
-1. Improve the Enum Config concern to support the overloaded enum i18n name
+1. Improved the Enum Config concern to support the overloaded enum i18n name
