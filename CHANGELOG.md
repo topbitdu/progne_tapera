@@ -14,3 +14,6 @@
 
 ## v0.3
 1. Improved the Enum Config concern to support the overloaded enum i18n name
+
+## v0.4
+1. Improve the Enum List concern to add the .``lookup`` method

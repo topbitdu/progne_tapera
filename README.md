@@ -179,9 +179,18 @@ The Enum List concern do the following tasks for the includer automatically:
 7. Define the .all method as: ``all``  
 8. Define the .selected method as: ``selected(&block)``  
 9. Define the .each method as: ``each(&block)``  
-10. Define the .form_options method as: ``form_options(&block)``  
-11. Define the .deserialize method as: ``deserialize(value)``  
-12. Define the .serialize method as: ``serialize(value)``
+10. Define the .lookup method as: ``lookup(code)``
+11. Define the .form_options method as: ``form_options(&block)``  
+12. Define the .deserialize method as: ``deserialize(value)``  
+13. Define the .serialize method as: ``serialize(value)``
+
+```ruby
+gender = Gender.lookup '1' # Lookup the gender per code
+gender.name                # male
+
+Gender.form_options        # { '男' => '1', '女' => '2', '未指定' => '9' }
+# It's useful for the HTML select options
+```
 
 ### Enum Config concern
 
