@@ -196,7 +196,7 @@ Gender.form_options        # { '男' => '1', '女' => '2', '未指定' => '9' }
 
 The Enum Config concern do the following tasks for the includer automatically:  
 1. Include the Enum List concern  
-2. Define the .enum method as: ``enum(name = nil)``
+2. Define the .enum method as: ``enum(name = nil, localized_name = name, &block)``
 3. Define the .overload_enum_i18n method as: ``overload_enum_i18n(localized_name = nil)``
 
 config/locales/enum.zh-CN.yml
@@ -222,7 +222,20 @@ Ethnicity::HAN.code           # 'HA'
 Ethnicity::HAN.localized_name # '汉族' not '汉'
 ```
 
+基于数据或者其他的方式扩展枚举型：
+```ruby
+Ethnicity.enum do
+  {
+    miao: { code: 'MH', numeric_code: '06', localized_name: '苗' },
+    yi:   { code: 'YI', numeric_code: '07', localized_name: '彝' }
+  }
+end
 
+Ethnicity::MIAO.code           # 'MH'
+Ethnicity::MIAO.localized_name # '苗'
+Ethnicity::YI.code             # 'YI'
+Ethnicity::YI.localized_name   # '彝'
+```
 
 ### Enum Code concern
 
