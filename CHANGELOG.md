@@ -19,4 +19,4 @@
 1. Improved the Enum List concern to add the .``lookup`` method
 
 ## v0.5
-1. Improve the Enum Config concern to be able to be extended by lambda
+1. Improved the Enum Config concern to be able to be extended by lambda
