@@ -1,5 +1,7 @@
 require 'rails'
 
+##
+# Enum List 是枚举列表。
 module ProgneTapera::EnumList
 
   extend ActiveSupport::Concern
