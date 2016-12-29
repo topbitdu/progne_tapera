@@ -1,3 +1,6 @@
+##
+# Enum Code 是在模型层配置知识层枚举的领域关注点。
+
 module ProgneTapera::EnumCode
 
   extend ActiveSupport::Concern
