@@ -1,5 +1,5 @@
 ##
-# Enum Code 是在模型层配置知识层枚举的领域关注点。
+# Enum Code 是在模型层配置知识层枚举的关注点，提供 .code 宏方法。
 
 module ProgneTapera::EnumCode
 
