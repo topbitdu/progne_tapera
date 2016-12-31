@@ -1,7 +1,8 @@
 require 'rails'
 
 ##
-# Enum List 是枚举列表。
+# Enum List 是知识层枚举列表的领域逻辑关注点。
+
 module ProgneTapera::EnumList
 
   extend ActiveSupport::Concern
