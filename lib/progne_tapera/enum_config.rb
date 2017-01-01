@@ -1,3 +1,6 @@
+##
+# Enum Config 是知识层枚举类型的配置关注点。提供 .enum 和 .overload_enum_i18n 方法。
+
 module ProgneTapera::EnumConfig
 
   extend  ActiveSupport::Concern
