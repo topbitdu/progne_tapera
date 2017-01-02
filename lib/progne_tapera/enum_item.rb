@@ -1,5 +1,9 @@
 require 'rails'
 
+##
+# Enum Item 是枚举项。
+# enum_item = ProgneTapera::EnumItem.new '1', 'male', { localized_name: '男' }
+
 class ProgneTapera::EnumItem
 
   attr_reader :code, :name, :options
