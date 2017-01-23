@@ -10,6 +10,11 @@ module ProgneTapera::EnumCode
 
   module ClassMethods
 
+    ##
+    # 为关注的类提供以下逻辑：
+    # 1. 验证 ``field``_code 字段的值，是否在枚举类型的定义中。
+    # 2. 定义 ``field`` 方法，用于获取枚举型的值。
+    # 3. 定义 ``field``= 方法，用于为枚举型字段赋值。
     def code(field, enum)
       code_field_name = :"#{field}_code"
       validates code_field_name, inclusion: enum.all.map { |item| item.code }
