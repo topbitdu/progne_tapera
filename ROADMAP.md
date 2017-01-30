@@ -21,5 +21,8 @@
 ## v0.5
 1. Improve the Enum Code concern to be able to be extended by lambda
 
+## v0.5.1
+1. Improve the Enum config concern for the Item Methods module
+
 ## v0.6
 1. Improve the Enum Config concern to make the enum items be able to be updated or destroyable through the #enum method
