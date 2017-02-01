@@ -1,5 +1,3 @@
-require 'rails'
-
 ##
 # Enum List 是知识层枚举列表的领域逻辑关注点。
 
@@ -29,15 +27,17 @@ module ProgneTapera::EnumList
       raise ArgumentError.new "The #{item.inspect} item should be an instance of ProgneTapera::EnumItem." unless item.is_a?    ProgneTapera::EnumItem
       raise ArgumentError.new "The #{item.constant_name} enum item was defined already."                  if     item_defined? item
 
-      item_methods_module = "#{self.name}::ItemMethods".safe_constantize
-      item.class.include item_methods_module if item_methods_module.present?
-
       const_set item.constant_name, item
     end
 
     def safe_add_item(item)
       const_set item.constant_name, item if item.is_a?(ProgneTapera::EnumItem)&&!item_defined?(item)
     end
+
+    # Destroy or Update the Enum Items
+    #def clear_optional_items
+      #
+    #end
 
     # Infrastructure for the Enumerable
     def enum_constants
