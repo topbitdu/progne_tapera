@@ -20,3 +20,6 @@
 
 ## v0.5
 1. Improved the Enum Config concern to be able to be extended by lambda
+
+## v0.5.1
+1. Improve the Enum config concern for the Item Methods module

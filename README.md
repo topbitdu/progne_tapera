@@ -99,20 +99,27 @@ app/types/ethnicity.rb
 ```ruby
 class Ethnicity < ActiveRecord::Type::Value
 
+  # The Item Methods module must be defined before the ``enum :china_ethnicity`` code block, so it could be called there.
+  module ItemMethods
+
+    extend ActiveSupport::Concern
+
+    included do |includer|
+
+      def major?
+        'HA'==code
+      end
+      # Ethnicity::HAN.major? returns true
+      # Ethnicity::MONGEL.major? returns false
+
+    end
+
+  end
+
   include ProgneTapera::EnumConfig
 
   enum :china_ethnicity
   # 用 :china_ethnicity 指定的 i18n 资源。
-
-  module ItemMethods
-
-    def major?
-      'HA'==code
-    end
-    # Ethnicity::HAN.major? returns true
-    # Ethnicity::MONGEL.major? returns false
-
-  end
 
 end
 ```
