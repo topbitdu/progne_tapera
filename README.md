@@ -180,17 +180,29 @@ include ProgneTapera::EnumCode
 
 The Enum List concern do the following tasks for the includer automatically:
 1. Include the Enumerable module
+
 2. Define the .enum_name method as: ``enum_name(name = nil)``
+
 3. Define the .item_defined? method as: ``item_defined?(item)``
+
 4. Define the .add_item method as: ``add_item(item)``
+
 5. Define the .safe_add_item method as: ``safe_add_item(item)``
+
 6. Define the .enum_constants method as: ``enum_constants``
+
 7. Define the .all method as: ``all``
+
 8. Define the .selected method as: ``selected(&block)``
+
 9. Define the .each method as: ``each(&block)``
+
 10. Define the .lookup method as: ``lookup(code)``
+
 11. Define the .form_options method as: ``form_options(&block)``
+
 12. Define the .deserialize method as: ``deserialize(value)``
+
 13. Define the .serialize method as: ``serialize(value)``
 
 ```ruby
@@ -205,7 +217,9 @@ Gender.form_options        # { '男' => '1', '女' => '2', '未指定' => '9' }
 
 The Enum Config concern do the following tasks for the includer automatically:
 1. Include the Enum List concern
+
 2. Define the .enum method as: ``enum(name = nil, localized_name = name, &block)``
+
 3. Define the .overload_enum_i18n method as: ``overload_enum_i18n(localized_name = nil)``
 
 config/locales/enum.zh-CN.yml
