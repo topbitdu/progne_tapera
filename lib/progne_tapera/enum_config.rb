@@ -34,10 +34,15 @@ module ProgneTapera::EnumConfig
           code    = options.delete :code
           options[:localized_name] = I18n.t "enum.#{localized_name||name}.#{key}"
           item = ProgneTapera::EnumItem.new code, key, options
-          class << item
-            item_method_module = "#{self.name}::ItemMethods".safe_constantize
+
+          item_method_module = "#{self.name}::ItemMethods".safe_constantize
+          item.class_eval do
             include item_method_module if item_method_module.present?
           end
+          #class << item
+          #  include item_method_module if item_method_module.present?
+          #end
+
           safe_add_item item
         end
 
