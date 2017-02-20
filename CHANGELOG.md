@@ -23,3 +23,6 @@
 
 ## v0.5.1
 1. Improved the Enum config concern for the Item Methods module
+
+## v0.5.2
+1. Improve the Enum Config concern for the Item Methods module
