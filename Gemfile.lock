@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    progne_tapera (0.5.1)
+    progne_tapera (0.5.2)
       rails (>= 4.2)
 
 GEM
