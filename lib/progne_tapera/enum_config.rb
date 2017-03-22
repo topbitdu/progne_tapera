@@ -11,6 +11,13 @@ module ProgneTapera::EnumConfig
 
   module ClassMethods
 
+    ##
+    # 为枚举类型提供 .enum 方法。如：
+    # enum :gender
+    # # 或
+    # enum :gender, :localized_gender
+    # 第一个参数是枚举类型在配置文件中存储的枚举项的 key 。
+    # 第二个参数是枚举类型在国际化配置文件中存储的枚举项文本的 key 。如果不提供第二个参数，则自动使用第一个参数进行查找。
     def enum(name = nil, localized_name = name)
 
       if block_given?
