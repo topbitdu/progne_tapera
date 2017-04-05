@@ -8,6 +8,7 @@ class ProgneTapera::EnumItem
 
   attr_reader :code, :name, :options
 
+  ##
   # code = HA (value)
   # name = han
   # options = { localized_name: '汉' }
