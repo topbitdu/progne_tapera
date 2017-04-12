@@ -57,6 +57,9 @@ module ProgneTapera::EnumConfig
 
     end
 
+    ##
+    # 为枚举类型提供 .overload_enum_i18n 方法。如：
+    # overload_enum_i18n :your_gender_i18n_key
     def overload_enum_i18n(localized_name = nil)
 
       each do |enum_item|
