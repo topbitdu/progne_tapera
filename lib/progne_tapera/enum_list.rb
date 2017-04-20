@@ -13,6 +13,12 @@ module ProgneTapera::EnumList
     include Enumerable
 
     # Define the Enum type
+
+    ##
+    # 向枚举类型提供枚举的配置名。如果不提供配置名则根据枚举类型的名称自动猜测。如：
+    # eumu_name
+    # # 或
+    # enum_name :gender
     def enum_name(name = nil)
       return @enum_name if @enum_name.present?
       @enum_name = (name||self.name.demodulize.underscore).to_sym
