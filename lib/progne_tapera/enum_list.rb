@@ -36,6 +36,11 @@ module ProgneTapera::EnumList
       const_set item.constant_name, item
     end
 
+    ##
+    # 以安全的方式向一个枚举列表中添加一个枚举项。如果该枚举项已经在枚举列表中，则不添加。如：
+    # Gender.safe_add_item male
+    # Gender.safe_add_item female
+    # Gender.safe_add_item male   # male won't be added twice.
     def safe_add_item(item)
       const_set item.constant_name, item if item.is_a?(ProgneTapera::EnumItem)&&!item_defined?(item)
     end
