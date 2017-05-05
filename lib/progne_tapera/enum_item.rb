@@ -32,6 +32,8 @@ class ProgneTapera::EnumItem
 
   end
 
+  ##
+  # 判断两个枚举项的 #code 字段是否相等。
   def ==(that)
     self.code==that.code
   end
