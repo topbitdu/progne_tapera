@@ -58,6 +58,9 @@ module ProgneTapera::EnumList
       }
     end
 
+    ##
+    # 列出所有的枚举型。如：
+    # Gender.all
     def all
       enum_constants.map { |constant| const_get constant }
     end
